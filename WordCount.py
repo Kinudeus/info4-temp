@@ -7,11 +7,9 @@ from collections import Counter
 import re
 
 def wordCount(arg1):
-    arg1 = input('任意の英文を入力してください')
-    print(arg1)
-
+    arg1 = input('任意の英文を入力してください:')
     word = re.sub('[.],[,]','',arg1.lower())
-    words = re.split(r'\s|\,|\.|\(|\)', word.lower()) 
+    words = re.split(r'\s|\,|\.|\(|\)', word.lower())
     counter = Counter(words)
     print(counter)
 
